@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+const caesarCipher = ( string, shift) => {
+const alphabet= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let encodedText = '';
+    //let shift;
+if (shift > 26) {
+    shift = shift % 26;
+  }
+    let i= 0;
+  while (i < string.length) {
+    
+    if (alphabet.indexOf(string[i]) !== -1) {
+      const alphabetIndex = alphabet.indexOf((string[i]).toUpperCase());
+      if (alphabet[alphabetIndex + shift]) {
+        encodedText += alphabet[alphabetIndex + shift];
+      }
+        else {
+        encodedText += alphabet[alphabetIndex + shift - 26];
+      }
+    }
+     else {
+      encodedText += string[i];
+}
+ i++;
+  }
+    return encodext;
+};
+//console.log(caesarCipher('HELLO',1));
+</script>
+
+</body>
+</html>
